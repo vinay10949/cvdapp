@@ -13,17 +13,17 @@ import pickle
 import catboost
 from sklearn.externals import joblib
 
-joblib_file = "joblib_catboost_Model.pkl"  
+joblib_file = "model/joblib_catboost_Model.pkl"  
 catboost_calibrated_model = joblib.load(joblib_file)
 
-ohe_file = "ohe.pkl"  
+ohe_file = "model/ohe.pkl"  
 ohe_enc = joblib.load(ohe_file)
 
-jamesStienenc_file = "jamesStienenc.pkl"  
+jamesStienenc_file = "model/jamesStienenc.pkl"  
 jamesStienenc_enc = joblib.load(jamesStienenc_file)
 
 
-ageDiscretizer_file = "ageDiscretizer.pkl"  
+ageDiscretizer_file = "model/ageDiscretizer.pkl"  
 ageDiscretizer = joblib.load(ageDiscretizer_file)
 test=pd.read_csv("test.csv", index_col=None)
 test.drop('Unnamed: 0',axis=1,inplace=True)
